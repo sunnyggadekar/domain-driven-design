@@ -8,12 +8,12 @@ namespace Marketplace.Domain
 {
     public class ClassifiedAd
     {
-        public readonly ClassifiedAdId _classifiedAdId;
+        public ClassifiedAdId Id { get; }
         private readonly UserId _ownerId;
 
         public ClassifiedAd(ClassifiedAdId id, UserId ownerId) 
         {
-            _classifiedAdId = id;
+            Id = id;
             _ownerId = ownerId;
         }
 
