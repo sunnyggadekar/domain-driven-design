@@ -1,21 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Marketplace.Framework;
+using System;
 
 namespace Marketplace.Domain
 {
-    public class ClassifiedAdId
+    public class ClassifiedAdId : Value<ClassifiedAdId>
     {
         private readonly Guid _value;
 
-        public ClassifiedAdId(Guid value)
-        {
-            if (value == default)
-                throw new ArgumentException("", nameof(value));
-
-            _value = value;
-        }
+        public ClassifiedAdId(Guid value) => _value = value;
     }
 }
