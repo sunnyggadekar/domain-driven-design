@@ -5,9 +5,20 @@ namespace Marketplace.Domain
 {
     public class Money : Value<Money>
     {
-        public decimal Amount { get; }
+        public static Money FromDecimal(decimal amount) => new(amount);
 
-        public Money(decimal amount) => Amount = amount;
+        public static Money FormString(string amount) => new(decimal.Parse(amount));
+
+        protected Money(decimal amount)
+        {
+            if (decimal.Round(amount, 2) != amount)
+                throw new ArgumentOutOfRangeException(
+                    nameof(amount),
+                    "Amount cannot have more than two decimals");
+            Amount = amount;
+        }
+
+        public decimal Amount { get; }
 
         public Money Add(Money summand) => new Money(Amount + summand.Amount);
 
