@@ -6,11 +6,10 @@ namespace Marketplace.UnitTest
     public class MoneyTest
     {
         [Fact]
-        public void Money_object()
+        public void money_objects_with_same_amount_should_be_equal()
         {
             var firstAmout = new Money(5);
             var seconfAmout = new Money(5);
-
             Assert.Equal(firstAmout, seconfAmout);
         }
 
@@ -20,9 +19,7 @@ namespace Marketplace.UnitTest
             var coin1 = new Money(1);
             var coin2 = new Money(2);
             var coin3 = new Money(2);
-
             var bankNote = new Money(5);
-
             Assert.Equal(bankNote, coin1+coin2+coin3);
 
         }
