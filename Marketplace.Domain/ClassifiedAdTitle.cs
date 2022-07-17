@@ -6,8 +6,7 @@ namespace Marketplace.Domain
 {
     public class ClassifiedAdTitle : Value<ClassifiedAdTitle>
     {
-        public static ClassifiedAdTitle FromString(string title) =>
-            new(title);
+        public static ClassifiedAdTitle FromString(string title) => new(title);
         
         public static ClassifiedAdTitle FromHtml(string htmlTitle)
         {
