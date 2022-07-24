@@ -42,7 +42,7 @@ namespace Marketplace.Domain
             Raise(new Events.ClassifiedAdTitleChanged
             {
                 Id = Id,
-                Tittle = title
+                Title = title
             });
             EnsureValidState();
         }
@@ -64,7 +64,7 @@ namespace Marketplace.Domain
             Raise(new Events.ClassifiedAdPriceUpdated
             {
                 Id = Id,
-                Price = price
+                Price = price.Amount
             });
             EnsureValidState();
         }

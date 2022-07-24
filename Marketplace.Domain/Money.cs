@@ -24,10 +24,10 @@ namespace Marketplace.Domain
             var currency = currencyLookup.FindCurrency(currencyCode);
 
             if (!currency.InUse)
-                throw new ArgumentException($"Currency { currencyCode } is not valid");
+                throw new ArgumentException($"Currency {currencyCode} is not valid");
 
             if (decimal.Round(amount, 2) != amount)
-                throw new ArgumentOutOfRangeException(nameof(amount), $"Amount in { currencyCode } cannot have more than  { currency.DecimalPlaces } decimals");
+                throw new ArgumentOutOfRangeException(nameof(amount), $"Amount in {currencyCode} cannot have more than  {currency.DecimalPlaces} decimals");
 
             Amount = amount;
             Currency = currency;
