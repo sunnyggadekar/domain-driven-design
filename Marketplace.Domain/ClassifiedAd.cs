@@ -65,8 +65,5 @@
                 throw new InvalidEntityStateException(this, "Post-checks failed in state");
         }
 
-
-
-
     }
 }

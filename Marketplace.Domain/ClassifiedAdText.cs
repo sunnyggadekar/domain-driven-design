@@ -13,7 +13,6 @@ namespace Marketplace.Domain
         {
             if (value == string.Empty)
                 throw new ArgumentOutOfRangeException(nameof(value), "Ad text cannot be empty");
-
             _value = value;
         }
 
