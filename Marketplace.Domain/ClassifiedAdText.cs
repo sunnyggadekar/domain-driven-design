@@ -7,16 +7,11 @@ namespace Marketplace.Domain
     {
         public static ClassifiedAdText FromString(string adText) => new(adText);
 
-        private readonly string _value;
+        public string Value { get; }
 
-        private ClassifiedAdText(string value)
-        {
-            if (value == string.Empty)
-                throw new ArgumentOutOfRangeException(nameof(value), "Ad text cannot be empty");
-            _value = value;
-        }
+        internal ClassifiedAdText(string value) => Value = value;
 
-        public static implicit operator string(ClassifiedAdText text) => text._value;
+        public static implicit operator string(ClassifiedAdText text) => text.Value;
 
     }
 }
