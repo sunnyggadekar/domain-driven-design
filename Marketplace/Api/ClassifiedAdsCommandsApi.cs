@@ -17,7 +17,7 @@ namespace Marketplace.Api
         [HttpPost]
         public async Task<IActionResult> Post(Contracts.ClassifiedAds.V1.Create request)
         {
-            _applicationService.Handle(request);
+            await _applicationService.Handle(request);
             return Ok();
         }
     }
