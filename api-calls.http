@@ -1,1 +1,9 @@
 POST http://localhost:5000/ad?Id=593aefff-f67b-4ff6-9e05-2e8667b27643&OwnerId=2ac624d0-1476-4099-b0ec-273118b274a4
+###
+PUT  http://localhost:5000/ad/name?Id=593aefff-f67b-4ff6-9e05-2e8667b27643&Title=Furniture
+###
+PUT  http://localhost:5000/ad/text?Id=593aefff-f67b-4ff6-9e05-2e8667b27643&Text=Sofa%20and%20bed%20for%20sale
+###
+PUT http://localhost:5000/ad/price?Id=593aefff-f67b-4ff6-9e05-2e8667b27643&Price=200&Currency=dollars
+###
+PUT http://localhost:5000/ad/publish?Id=593aefff-f67b-4ff6-9e05-2e8667b27643
