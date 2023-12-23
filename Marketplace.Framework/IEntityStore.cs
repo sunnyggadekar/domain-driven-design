@@ -2,7 +2,7 @@ using System.Threading.Tasks;
 
 namespace Marketplace.Framework
 {
-    public interface IEntityStore
+    public interface IClassifiedAdRepository
     {
         /// <summary>
         /// Loads an entity by id
