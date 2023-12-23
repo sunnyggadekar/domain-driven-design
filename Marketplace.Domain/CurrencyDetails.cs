@@ -2,10 +2,6 @@
 
 namespace Marketplace.Domain
 {
-    public interface ICurrencyLookup
-    {
-        CurrencyDetails FindCurrency(string currencyCode);
-    }
 
     public class CurrencyDetails : Value<CurrencyDetails>
     {
